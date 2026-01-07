@@ -21,13 +21,14 @@ const Hero = () => {
                     >
                         IN PRESENCE
                     </h1>
-                    <p className="text-[15px] leading-[1.7] text-[#1a1a1a] font-light">
-                        The{' '}
+                    <p className="text-[15px] leading-[1.4] text-[#1a1a1a] font-light">
+                        Timeless abayas designed for modern elegance.{' '}
                         <span className="text-[#000000] font-medium">
-                            film is homage to Late Architect Didi Contractor's philosophy
-                        </span>{' '}
-                        where making is a regenerative act, a form of social cohesion, and a
-                        reclamation of culture.
+                            Crafted with care, each piece blends modesty, comfort, and refined style for everyday wear and special moments.
+                        </span>
+                        <br />
+                        <br />
+                        Discover effortless silhouettes, premium fabrics, and subtle details made to move with you and elevate your presence, wherever you go.
                     </p>
                 </div>
             </div>

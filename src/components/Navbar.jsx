@@ -25,7 +25,6 @@ const Navbar = () => {
                 <div className="flex justify-center items-center w-full relative mb-4">
                     <div
                         className="text-xl font-normal text-[#1a1a1a] tracking-[2px] uppercase"
-                        style={{ fontFamily: "'Darlington', serif" }}
                     >
                         Abhaya
                     </div>
@@ -77,10 +76,7 @@ const Navbar = () => {
                     <span className="block w-5 h-[1.5px] bg-[#1a1a1a] transition-all duration-300"></span>
                     <span className="block w-5 h-[1.5px] bg-[#1a1a1a] transition-all duration-300"></span>
                 </button>
-                <div
-                    className="text-[22px] font-normal text-[#1a1a1a] tracking-[2px] uppercase"
-                    style={{ fontFamily: "'Darlington', serif" }}
-                >
+                <div className="text-[22px] font-normal text-[#1a1a1a] tracking-[2px] uppercase">
                     Abhaya
                 </div>
                 <div className="flex items-center gap-4">
