@@ -67,7 +67,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navbar */}
-            <div className="flex md:hidden justify-between items-center py-0 px-0">
+            <div className="flex md:hidden justify-between items-center py-3 px-4">
                 <button
                     className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
                     onClick={toggleMobileMenu}
