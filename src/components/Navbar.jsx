@@ -45,91 +45,94 @@ const Navbar = () => {
     };
 
     return (
-        <header
-            className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300
-                ${isScrolled ? 'bg-white md:bg-white' : 'bg-white md:bg-white bg-transparent'}
-                ${isVisible ? 'translate-y-0' : 'md:translate-y-0 -translate-y-full'}
-            `}
-            style={{
-                backgroundColor: isScrolled ? 'white' : 'transparent',
-            }}
-        >
-            {/* Desktop Navbar - always white background */}
-            <div className="hidden md:flex flex-col items-center py-4 px-10 bg-white">
-                <div className="flex justify-center items-center w-full relative mb-4">
-                    <div
-                        className="text-xl font-normal text-[#1a1a1a] tracking-[2px] uppercase"
+        <>
+            <header
+                className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300
+                    ${isScrolled ? 'bg-white md:bg-white' : 'bg-white md:bg-white bg-transparent'}
+                    ${isVisible ? 'translate-y-0' : 'md:translate-y-0 -translate-y-full'}
+                `}
+                style={{
+                    backgroundColor: isScrolled ? 'white' : 'transparent',
+                }}
+            >
+                {/* Desktop Navbar - always white background */}
+                <div className="hidden md:flex flex-col items-center py-4 px-10 bg-white">
+                    <div className="flex justify-center items-center w-full relative mb-4">
+                        <div
+                            className="text-xl font-normal text-[#1a1a1a] tracking-[2px] uppercase"
+                        >
+                            Abhaya
+                        </div>
+                        <div className="flex items-center gap-4 absolute right-0">
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="User account"
+                            >
+                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <circle cx="12" cy="8" r="4" />
+                                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                </svg>
+                            </button>
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="Search"
+                            >
+                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
+                            </button>
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="Shopping bag"
+                            >
+                                <img className="w-5 h-5" src={bagIcon} alt="Bag" />
+                            </button>
+                        </div>
+                    </div>
+                    <nav className="flex justify-center items-center gap-5 lg:gap-8 flex-wrap">
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="font-sans text-[11px] lg:text-[11px] md:text-[10px] font-normal text-[#1a1a1a] no-underline tracking-[1px] uppercase transition-opacity duration-200 py-1 hover:opacity-70"
+                            >
+                                {link.name}
+                            </a>
+                        ))}
+                    </nav>
+                </div>
+
+                {/* Mobile Navbar */}
+                <div className="flex md:hidden justify-between items-center py-3 px-4">
+                    <button
+                        className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
+                        onClick={toggleMobileMenu}
+                        aria-label="Toggle menu"
                     >
+                        <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
+                        <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
+                        <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
+                    </button>
+                    <div className={`text-[22px] font-normal tracking-[2px] uppercase transition-colors duration-300 ${isScrolled ? 'text-[#1a1a1a]' : 'text-white'}`}>
                         Abhaya
                     </div>
-                    <div className="flex items-center gap-4 absolute right-0">
-                        <button
-                            className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                            aria-label="User account"
-                        >
-                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                <circle cx="12" cy="8" r="4" />
-                                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                            </svg>
-                        </button>
+                    <div className="flex items-center gap-4">
                         <button
                             className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                             aria-label="Search"
                         >
-                            <img className="w-5 h-5" src={searchIcon} alt="Search" />
+                            <img className={`w-[20px] h-[20px] transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`} src={searchIcon} alt="Search" />
                         </button>
                         <button
                             className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                             aria-label="Shopping bag"
                         >
-                            <img className="w-5 h-5" src={bagIcon} alt="Bag" />
+                            <img className={`w-[20px] h-[20px] transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`} src={bagIcon} alt="Bag" />
                         </button>
                     </div>
                 </div>
-                <nav className="flex justify-center items-center gap-5 lg:gap-8 flex-wrap">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="font-sans text-[11px] lg:text-[11px] md:text-[10px] font-normal text-[#1a1a1a] no-underline tracking-[1px] uppercase transition-opacity duration-200 py-1 hover:opacity-70"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                </nav>
-            </div>
 
-            {/* Mobile Navbar */}
-            <div className="flex md:hidden justify-between items-center py-3 px-4">
-                <button
-                    className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
-                    onClick={toggleMobileMenu}
-                    aria-label="Toggle menu"
-                >
-                    <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
-                    <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
-                    <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
-                </button>
-                <div className={`text-[22px] font-normal tracking-[2px] uppercase transition-colors duration-300 ${isScrolled ? 'text-[#1a1a1a]' : 'text-white'}`}>
-                    Abhaya
-                </div>
-                <div className="flex items-center gap-4">
-                    <button
-                        className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                        aria-label="Search"
-                    >
-                        <img className={`w-[20px] h-[20px] transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`} src={searchIcon} alt="Search" />
-                    </button>
-                    <button
-                        className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                        aria-label="Shopping bag"
-                    >
-                        <img className={`w-[20px] h-[20px] transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`} src={bagIcon} alt="Bag" />
-                    </button>
-                </div>
-            </div>
+            </header>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Menu Overlay - Outside header to avoid transform issues */}
             <div
                 className={`fixed inset-0 bg-black/50 z-[1001] transition-all duration-300 md:hidden ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
                     }`}
@@ -164,7 +167,7 @@ const Navbar = () => {
                     </nav>
                 </div>
             </div>
-        </header>
+        </>
     );
 };
 
