@@ -42,7 +42,7 @@ const Season = () => {
                 <span className="text-[11px] md:text-[12px] tracking-[2px] text-[#666] uppercase">
                     WOMEN
                 </span>
-                <h2 className="text-[22px] md:text-[32px] font-normal text-[#1a1a1a] mt-2 tracking-[0.5px]">
+                <h2 className="text-[22px] md:text-[32px] font-light text-[#1a1a1a] mt-2 tracking-[0.5px]">
                     WINTER COLLECTION
                 </h2>
             </div>
