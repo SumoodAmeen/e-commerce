@@ -14,7 +14,7 @@ const Hero = () => {
                     />
                 </div>
 
-                {/* Content Section */}
+                {/* Content Section 
                 <div className="px-4 py-6">
                     <h1
                         className="text-[28px] font-light text-[#1a1a1a] tracking-[1px] mb-4"
@@ -30,7 +30,7 @@ const Hero = () => {
                         <br />
                         Discover effortless silhouettes, premium fabrics, and subtle details made to move with you and elevate your presence, wherever you go.
                     </p>
-                </div>
+                </div>*/}
             </div>
 
             {/* Desktop View */}
