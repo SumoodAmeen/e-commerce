@@ -44,7 +44,7 @@ const Hero = () => {
                     />
                 </div>
 
-                {/* Content Section - Below Image */}
+                {/* Content Section - Below Image 
                 <div className="px-16 py-10">
                     <h1
                         className="text-[36px] font-normal text-[#1a1a1a] tracking-[2px] mb-6"
@@ -60,7 +60,7 @@ const Hero = () => {
                         <br />
                         Discover effortless silhouettes, premium fabrics, and subtle details made to move with you and elevate your presence, wherever you go.
                     </p>
-                </div>
+                </div>*/}
             </div>
         </section>
     );
