@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero/hero.jpeg';
+import heroImage from '../assets/hero/hero1.jpeg';
 
 const Hero = () => {
     return (
@@ -17,7 +17,7 @@ const Hero = () => {
                 {/* Content Section */}
                 <div className="px-4 py-6">
                     <h1
-                        className="text-[28px] font-normal text-[#1a1a1a] tracking-[1px] mb-4"
+                        className="text-[28px] font-light text-[#1a1a1a] tracking-[1px] mb-4"
                     >
                         IN PRESENCE
                     </h1>
