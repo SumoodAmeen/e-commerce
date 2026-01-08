@@ -153,7 +153,7 @@ const Navbar = () => {
                             <line x1="6" y1="6" x2="18" y2="18" />
                         </svg>
                     </button>
-                    <nav className="flex flex-col gap-15">
+                    <nav className="flex flex-col gap-8">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
