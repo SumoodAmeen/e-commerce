@@ -91,7 +91,7 @@ const Season = () => {
             {/* CTA Button */}
             <div className="flex justify-center mt-8 md:mt-12 px-4">
                 <button className="px-8 py-3 md:py-3.5 border border-[#1a1a1a] rounded-full text-[13px] md:text-[14px] font-normal text-[#1a1a1a] bg-transparent hover:bg-[#1a1a1a] hover:text-white transition-all duration-300">
-                    Discover the Collection
+                    Shop
                 </button>
             </div>
         </section>
