@@ -32,7 +32,7 @@ const Collection = () => {
             {/* Section Header */}
             <div className="text-center mb-6 md:mb-10">
                 <h2 className="text-[22px] md:text-[32px] font-light text-[#1a1a1a] tracking-[0.5px]">
-                    Explore a Selection of the Maison's<br />Creations
+                    Explore Collections
                 </h2>
             </div>
 
