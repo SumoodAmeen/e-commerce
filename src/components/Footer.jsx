@@ -147,12 +147,8 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="flex justify-between items-center text-[11px] text-[#999] pt-4 border-t border-[#eee]">
-                    <div className="flex items-center gap-6">
-                        <span>© 2026</span>
-                        <span>Good Chaos Lifestyle Private Limited</span>
-                    </div>
-                    <span>All Rights Reserved.</span>
+                <div className="flex justify-center items-center text-[11px] text-[#999] pt-4 border-t border-[#eee]">
+                    <span>© 2026 ABHAYA Private Limited. All Rights Reserved.</span>
                 </div>
             </div>
 
@@ -257,18 +253,14 @@ const Footer = () => {
 
                 {/* Watermark Text */}
                 <div className="relative mb-8 overflow-hidden">
-                    <div className="text-[48px] sm:text-[60px] font-light text-[#f0f0f0] tracking-tight leading-none select-none whitespace-nowrap">
-                        Always at Play<span className="text-[#f5e6e6]">**</span>
+                    <div className="text-[45px] sm:text-[60px] font-light text-[#f0f0f0] tracking-tight leading-none select-none whitespace-nowrap">
+                        Always Modest<span className="text-[#f5e6e6]">**</span>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-[11px] text-[#999] pt-4 border-t border-[#eee]">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-                        <span>© 2026</span>
-                        <span>Good Chaos Lifestyle Private Limited</span>
-                    </div>
-                    <span>All Rights Reserved.</span>
+                <div className="flex justify-center items-center text-[11px] text-[#999] pt-4 border-t border-[#eee]">
+                    <span>© 2026 ABHAYA Private Limited. All Rights Reserved.</span>
                 </div>
             </div>
         </footer>
