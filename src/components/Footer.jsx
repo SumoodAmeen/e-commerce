@@ -224,9 +224,11 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
+                    </div>
 
-                        {/* Company - Below Explore on mobile */}
-                        <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4 mt-8">Company</h4>
+                    {/* Company */}
+                    <div>
+                        <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4">Company</h4>
                         <ul className="space-y-3">
                             {companyLinks.map((link) => (
                                 <li key={link.name}>
@@ -238,7 +240,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Social - Below Support */}
+                    {/* Social */}
                     <div>
                         <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4">Social</h4>
                         <ul className="space-y-3">
