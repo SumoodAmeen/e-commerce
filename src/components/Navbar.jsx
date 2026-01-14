@@ -85,31 +85,46 @@ const Navbar = () => {
                     </div>
 
                     {/* Right Icons */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-6 md:gap-8">
                         {/* Profile Icon - Desktop Only */}
-                        <button
-                            className="hidden md:flex bg-transparent border-none cursor-pointer p-1 items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                            aria-label="User account"
-                        >
-                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                <circle cx="12" cy="8" r="4" />
-                                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                            </svg>
-                        </button>
+                        <div className="hidden md:flex relative group">
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="User account"
+                            >
+                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <circle cx="12" cy="8" r="4" />
+                                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                </svg>
+                            </button>
+                            <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                MY ACCOUNT
+                            </span>
+                        </div>
                         {/* Search Icon */}
-                        <button
-                            className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                            aria-label="Search"
-                        >
-                            <img className="w-5 h-5" src={searchIcon} alt="Search" />
-                        </button>
+                        <div className="relative group">
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="Search"
+                            >
+                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
+                            </button>
+                            <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                SEARCH
+                            </span>
+                        </div>
                         {/* Bag Icon */}
-                        <button
-                            className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                            aria-label="Shopping bag"
-                        >
-                            <img className="w-5 h-5" src={bagIcon} alt="Bag" />
-                        </button>
+                        <div className="relative group">
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="Shopping bag"
+                            >
+                                <img className="w-5 h-5" src={bagIcon} alt="Bag" />
+                            </button>
+                            <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                BAG
+                            </span>
+                        </div>
                     </div>
                 </div>
             </header>
