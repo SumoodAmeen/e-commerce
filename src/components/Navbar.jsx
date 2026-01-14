@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import searchIcon from '../assets/navbar/search.svg';
 import bagIcon from '../assets/navbar/bag.svg';
 
@@ -6,7 +6,8 @@ const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const lastScrollY = useRef(0);
+    const scrollTimeoutRef = useRef(null);
 
     const navLinks = [
         { name: 'HOME', href: '/' },
@@ -25,20 +26,34 @@ const Navbar = () => {
             setIsScrolled(currentScrollY > 50);
 
             // Hide/show navbar based on scroll direction
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
                 // Scrolling down & past threshold - hide navbar
                 setIsVisible(false);
-            } else {
+            } else if (currentScrollY < lastScrollY.current) {
                 // Scrolling up - show navbar
                 setIsVisible(true);
             }
 
-            setLastScrollY(currentScrollY);
+            lastScrollY.current = currentScrollY;
+
+            // Reset idle timer on each scroll
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
+            }
+            // Show navbar after user stops scrolling for 800ms
+            scrollTimeoutRef.current = setTimeout(() => {
+                setIsVisible(true);
+            }, 800);
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
+            }
+        };
+    }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
