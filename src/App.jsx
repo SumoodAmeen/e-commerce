@@ -1,9 +1,10 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Season from './components/Season'
-import SeasonVideo from './components/Video'
 import Collection from './components/Collection'
+import SeasonVideo from './components/Video'
+import Season from './components/Season'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Collection />
       <SeasonVideo />
       <Season />
+      <Footer />
     </>
   )
 }

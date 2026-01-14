@@ -47,13 +47,9 @@ const Navbar = () => {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300
-                    ${isScrolled ? 'bg-white md:bg-white' : 'bg-white md:bg-white bg-transparent'}
+                className={`fixed top-0 left-0 right-0 z-[1000] transition-all duration-300 bg-white
                     ${isVisible ? 'translate-y-0' : 'md:translate-y-0 -translate-y-full'}
                 `}
-                style={{
-                    backgroundColor: isScrolled ? 'white' : 'transparent',
-                }}
             >
                 {/* Desktop Navbar - always white background */}
                 <div className="hidden md:flex flex-col items-center py-4 px-10 bg-white">
@@ -100,18 +96,18 @@ const Navbar = () => {
                     </nav>
                 </div>
 
-                {/* Mobile Navbar */}
+                {/* Mobile Navbar - always white background */}
                 <div className="flex md:hidden justify-between items-center py-3 px-4">
                     <button
                         className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
                         onClick={toggleMobileMenu}
                         aria-label="Toggle menu"
                     >
-                        <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
-                        <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
-                        <span className={`block w-5 h-[1.5px] transition-all duration-300 ${isScrolled ? 'bg-[#1a1a1a]' : 'bg-white'}`}></span>
+                        <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                        <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                        <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
                     </button>
-                    <div className={`text-[22px] font-normal tracking-[2px] uppercase transition-colors duration-300 ${isScrolled ? 'text-[#1a1a1a]' : 'text-white'}`}>
+                    <div className="text-[22px] font-normal tracking-[2px] uppercase text-[#1a1a1a]">
                         Abhaya
                     </div>
                     <div className="flex items-center gap-4">
@@ -119,13 +115,13 @@ const Navbar = () => {
                             className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                             aria-label="Search"
                         >
-                            <img className={`w-[20px] h-[20px] transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`} src={searchIcon} alt="Search" />
+                            <img className="w-[20px] h-[20px]" src={searchIcon} alt="Search" />
                         </button>
                         <button
                             className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                             aria-label="Shopping bag"
                         >
-                            <img className={`w-[20px] h-[20px] transition-all duration-300 ${isScrolled ? '' : 'brightness-0 invert'}`} src={bagIcon} alt="Bag" />
+                            <img className="w-[20px] h-[20px]" src={bagIcon} alt="Bag" />
                         </button>
                     </div>
                 </div>
