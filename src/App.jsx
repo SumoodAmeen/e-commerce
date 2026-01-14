@@ -1,10 +1,10 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Collection from './components/Collection'
-import SeasonVideo from './components/Video'
-import Season from './components/Season'
-import Footer from './components/Footer'
+import Navbar from './components/home_page/Navbar'
+import Hero from './components/home_page/Hero'
+import Collection from './components/home_page/Collection'
+import SeasonVideo from './components/home_page/Video'
+import Season from './components/home_page/Season'
+import Footer from './components/home_page/Footer'
 
 function App() {
   return (

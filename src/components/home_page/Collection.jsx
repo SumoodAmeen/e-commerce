@@ -1,7 +1,7 @@
-import collection1 from '../assets/collection/collection1.jpeg';
-import collection2 from '../assets/collection/collection2.jpeg';
-import collection3 from '../assets/collection/collection3.jpeg';
-import collection4 from '../assets/collection/collection4.jpeg';
+import collection1 from '../../assets/collection/collection1.jpeg';
+import collection2 from '../../assets/collection/collection2.jpeg';
+import collection3 from '../../assets/collection/collection3.jpeg';
+import collection4 from '../../assets/collection/collection4.jpeg';
 
 const Collection = () => {
     const collectionData = [

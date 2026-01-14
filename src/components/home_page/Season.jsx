@@ -1,10 +1,10 @@
-import product1 from '../assets/season/product1.jpeg';
-import product2 from '../assets/season/product2.jpeg';
-import product3 from '../assets/season/product3.jpeg';
-import product4 from '../assets/season/product4.jpeg';
-import product5 from '../assets/season/product5.jpeg';
-import product6 from '../assets/season/product6.jpeg';
-import wishlistIcon from '../assets/season/wishlist.png';
+import product1 from '../../assets/season/product1.jpeg';
+import product2 from '../../assets/season/product2.jpeg';
+import product3 from '../../assets/season/product3.jpeg';
+import product4 from '../../assets/season/product4.jpeg';
+import product5 from '../../assets/season/product5.jpeg';
+import product6 from '../../assets/season/product6.jpeg';
+import wishlistIcon from '../../assets/season/wishlist.png';
 
 const Season = () => {
     // Product data for the season collection

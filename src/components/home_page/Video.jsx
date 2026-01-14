@@ -1,5 +1,5 @@
 import React from 'react';
-import Video from '../assets/video/video.mp4';
+import Video from '../../assets/video/video.mp4';
 
 
 const SeasonVideo = () => {

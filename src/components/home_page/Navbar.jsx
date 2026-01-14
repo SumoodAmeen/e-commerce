@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import searchIcon from '../assets/navbar/search.svg';
-import bagIcon from '../assets/navbar/bag.svg';
+import searchIcon from '../../assets/navbar/search.svg';
+import bagIcon from '../../assets/navbar/bag.svg';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
