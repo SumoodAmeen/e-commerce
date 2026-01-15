@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import product1 from '../../assets/season/product1.jpeg';
 import product2 from '../../assets/season/product2.jpeg';
 import product3 from '../../assets/season/product3.jpeg';
@@ -90,9 +91,12 @@ const Season = () => {
 
             {/* CTA Button */}
             <div className="flex justify-center mt-8 md:mt-12 px-4">
-                <button className="px-8 py-3 md:py-3.5 border border-[#1a1a1a] rounded-full text-[13px] md:text-[14px] font-normal text-[#1a1a1a] bg-transparent hover:bg-[#1a1a1a] hover:text-white transition-all duration-300">
+                <Link
+                    to="/shop"
+                    className="px-8 py-3 md:py-3.5 border border-[#1a1a1a] rounded-full text-[13px] md:text-[14px] font-normal text-[#1a1a1a] bg-transparent hover:bg-[#1a1a1a] hover:text-white transition-all duration-300"
+                >
                     Shop
-                </button>
+                </Link>
             </div>
         </section>
     );

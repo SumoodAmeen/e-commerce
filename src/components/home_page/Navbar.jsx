@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import searchIcon from '../../assets/navbar/search.svg';
 import bagIcon from '../../assets/navbar/bag.svg';
 
@@ -152,14 +153,14 @@ const Navbar = () => {
                     </button>
                     <nav className="flex flex-col gap-8">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.name}
-                                href={link.href}
+                                to={link.href}
                                 className="font-sans text-sm font-normal text-[#1a1a1a] no-underline tracking-[1px] uppercase py-2.5 transition-opacity duration-200 hover:opacity-70"
                                 onClick={toggleMobileMenu}
                             >
                                 {link.name}
-                            </a>
+                            </Link>
                         ))}
                     </nav>
                 </div>
