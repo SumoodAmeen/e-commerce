@@ -67,7 +67,7 @@ const Shop = () => {
                                 <img
                                     src={product.image}
                                     alt={product.name}
-                                    className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                                    className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                                 />
 
                                 {/* Wishlist Icon */}
