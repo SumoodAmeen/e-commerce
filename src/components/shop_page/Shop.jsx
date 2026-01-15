@@ -1,5 +1,11 @@
 import React from 'react';
-import wishlistIcon from '../../assets/season/wishlist.png';
+import product1 from '../../assets/shop/product1.jpeg';
+import product2 from '../../assets/shop/product2.jpeg';
+import product3 from '../../assets/shop/product3.jpeg';
+import product4 from '../../assets/shop/product4.jpeg';
+import product5 from '../../assets/shop/product5.jpeg';
+import product6 from '../../assets/shop/product6.jpeg';
+import wishlistIcon from '../../assets/shop/wishlist.png';
 
 const Shop = () => {
     // Product data for the shop
@@ -8,57 +14,43 @@ const Shop = () => {
             id: 1,
             name: 'Coffee Indigo Denim Long-Sleeved Shirt',
             price: '₹2,43,000.00',
-            image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop',
+            image: product1,
             colors: [],
         },
         {
             id: 2,
             name: 'Coffee Indigo Denim Bootcut Pants',
             price: '₹1,65,000.00',
-            image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop',
+            image: product2,
             colors: [],
         },
         {
             id: 3,
             name: 'Nil GM x The Darjeeling Limited',
             price: '₹4,25,000.00',
-            image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop',
+            image: product3,
             colors: [],
         },
         {
             id: 4,
             name: 'LV Tilted Sneaker',
             price: '₹1,14,000.00',
-            image: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop',
+            image: product4,
             colors: ['#3d3529', '#1a1a1a'],
         },
         {
             id: 5,
             name: 'Premium Leather Jacket',
             price: '₹3,85,000.00',
-            image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop',
+            image: product5,
             colors: [],
         },
         {
             id: 6,
             name: 'Classic Oxford Shoes',
             price: '₹1,95,000.00',
-            image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=400&fit=crop',
+            image: product6,
             colors: ['#5c4033', '#1a1a1a'],
-        },
-        {
-            id: 7,
-            name: 'Designer Silk Scarf',
-            price: '₹89,000.00',
-            image: 'https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=400&h=400&fit=crop',
-            colors: [],
-        },
-        {
-            id: 8,
-            name: 'Vintage Leather Belt',
-            price: '₹45,000.00',
-            image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop',
-            colors: ['#8b4513', '#2c1810'],
         },
     ];
 
@@ -83,20 +75,11 @@ const Shop = () => {
                                     className="absolute top-3 right-3 md:top-4 md:right-4 w-6 h-6 md:w-7 md:h-7 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
                                     aria-label="Add to wishlist"
                                 >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        strokeWidth={1.5}
-                                        stroke="#5a5449"
+                                    <img
+                                        src={wishlistIcon}
+                                        alt="Wishlist"
                                         className="w-5 h-5 md:w-6 md:h-6"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                                        />
-                                    </svg>
+                                    />
                                 </button>
                             </div>
 
