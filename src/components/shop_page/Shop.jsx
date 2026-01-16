@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import product1 from '../../assets/shop/product1.jpeg';
 import product2 from '../../assets/shop/product2.jpeg';
 import product3 from '../../assets/shop/product3.jpeg';
@@ -8,6 +8,11 @@ import product6 from '../../assets/shop/product6.jpeg';
 import wishlistIcon from '../../assets/shop/wishlist.png';
 
 const Shop = () => {
+    // Scroll to top when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     // Product data for the shop
     const products = [
         {
