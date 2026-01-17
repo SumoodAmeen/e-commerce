@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import searchIcon from '../../assets/navbar/search.svg';
 import bagIcon from '../../assets/navbar/bag.svg';
+import wishlistIcon from '../../assets/navbar/wishlist.png';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -69,16 +70,31 @@ const Navbar = () => {
             >
                 {/* Unified Navbar for Desktop and Mobile */}
                 <div className="flex justify-between items-center py-3 px-4 md:py-8 md:px-10">
-                    {/* Hamburger Menu Button */}
-                    <button
-                        className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
-                        onClick={toggleMobileMenu}
-                        aria-label="Toggle menu"
-                    >
-                        <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
-                        <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
-                        <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
-                    </button>
+                    {/* Left Icons - Hamburger Menu and Search */}
+                    <div className="flex items-center gap-4 md:gap-6">
+                        {/* Hamburger Menu Button */}
+                        <button
+                            className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
+                            onClick={toggleMobileMenu}
+                            aria-label="Toggle menu"
+                        >
+                            <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                            <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                            <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                        </button>
+                        {/* Search Icon */}
+                        <div className="relative group">
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="Search"
+                            >
+                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
+                            </button>
+                            <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                SEARCH
+                            </span>
+                        </div>
+                    </div>
 
                     {/* Centered Logo */}
                     <div className="text-[22px] md:text-xl font-normal tracking-[2px] uppercase text-[#1a1a1a]">
@@ -102,16 +118,16 @@ const Navbar = () => {
                                 MY ACCOUNT
                             </span>
                         </div>
-                        {/* Search Icon */}
+                        {/* Wishlist Icon */}
                         <div className="relative group">
                             <button
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
-                                aria-label="Search"
+                                aria-label="Wishlist"
                             >
-                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
+                                <img className="w-5 h-5" src={wishlistIcon} alt="Wishlist" />
                             </button>
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                SEARCH
+                                WISHLIST
                             </span>
                         </div>
                         {/* Bag Icon */}
