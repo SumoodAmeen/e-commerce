@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import searchIcon from '../../assets/navbar/search.svg';
 import bagIcon from '../../assets/navbar/bag.svg';
 import wishlistIcon from '../../assets/navbar/wishlist.png';
+import callIcon from '../../assets/navbar/noun-call-4149488.svg';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -71,17 +72,22 @@ const Navbar = () => {
                 {/* Unified Navbar for Desktop and Mobile */}
                 <div className="flex justify-between items-center py-3 px-4 md:py-8 md:px-10">
                     {/* Left Icons - Hamburger Menu and Search */}
-                    <div className="flex items-center gap-4 md:gap-6">
+                    <div className="flex items-center gap-3 md:gap-6">
                         {/* Hamburger Menu Button */}
-                        <button
-                            className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
-                            onClick={toggleMobileMenu}
-                            aria-label="Toggle menu"
-                        >
-                            <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
-                            <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
-                            <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
-                        </button>
+                        <div className="relative group">
+                            <button
+                                className="bg-transparent border-none cursor-pointer p-1 flex flex-col gap-[5px]"
+                                onClick={toggleMobileMenu}
+                                aria-label="Toggle menu"
+                            >
+                                <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                                <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                                <span className="block w-5 h-[1.5px] bg-[#1a1a1a]"></span>
+                            </button>
+                            <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                MENU
+                            </span>
+                        </div>
                         {/* Search Icon */}
                         <div className="relative group">
                             <button
@@ -102,7 +108,22 @@ const Navbar = () => {
                     </div>
 
                     {/* Right Icons */}
-                    <div className="flex items-center gap-6 md:gap-8">
+                    <div className="flex items-center gap-3 md:gap-6">
+                        {/* Call Icon - Desktop Only */}
+                        <div className="hidden md:flex relative group">
+                            <a
+                                href="https://wa.me/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                aria-label="Contact via WhatsApp"
+                            >
+                                <img className="w-5 h-5" src={callIcon} alt="Call" />
+                            </a>
+                            <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                WHATSAPP
+                            </span>
+                        </div>
                         {/* Profile Icon - Desktop Only */}
                         <div className="hidden md:flex relative group">
                             <button
