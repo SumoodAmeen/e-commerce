@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import searchIcon from '../../assets/navbar/search.svg';
-import bagIcon from '../../assets/navbar/bag.svg';
-import wishlistIcon from '../../assets/navbar/wishlist.png';
-import callIcon from '../../assets/navbar/noun-call-4149488.svg';
+import searchIcon from '../../assets/navbar/search.png';
+import bagIcon from '../../assets/navbar/shopping-bag.png';
+import wishlistIcon from '../../assets/navbar/love.png';
+import callIcon from '../../assets/navbar/telephone.png';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -94,7 +94,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Search"
                             >
-                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
+                                <img className="w-4 h-4" src={searchIcon} alt="Search" />
                             </button>
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 SEARCH
@@ -118,7 +118,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Contact via WhatsApp"
                             >
-                                <img className="w-5 h-5" src={callIcon} alt="Call" />
+                                <img className="w-4.5 h-4.5" src={callIcon} alt="Call" />
                             </a>
                             <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 WHATSAPP
@@ -157,7 +157,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Shopping bag"
                             >
-                                <img className="w-5 h-5" src={bagIcon} alt="Bag" />
+                                <img className="w-6 h-6" src={bagIcon} alt="Bag" />
                             </button>
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 BAG

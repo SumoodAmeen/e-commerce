@@ -40,13 +40,3 @@ body {
 #root {
   width: 100%;
 }
-
-a {
-  font-weight: 400;
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: inherit;
-}
