@@ -126,7 +126,8 @@ const Navbar = () => {
                         </div>
                         {/* Profile Icon - Desktop Only */}
                         <div className="hidden md:flex relative group">
-                            <button
+                            <Link
+                                to="/login"
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="User account"
                             >
@@ -134,7 +135,7 @@ const Navbar = () => {
                                     <circle cx="12" cy="8" r="4" />
                                     <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
                                 </svg>
-                            </button>
+                            </Link>
                             <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 MY ACCOUNT
                             </span>
