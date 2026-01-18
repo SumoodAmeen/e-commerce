@@ -7,18 +7,12 @@ const Footer = () => {
         { name: 'Shipping', href: '/shipping' },
         { name: 'Return & Exchange', href: '/return-exchange' },
         { name: 'Return Policy', href: '/return-policy' },
-        { name: 'Care & Materials', href: '/care-materials' },
-        { name: 'Terms of use', href: '/terms' },
-        { name: 'Privacy', href: '/privacy' },
-        { name: 'Track Order', href: '/track-order' },
     ];
 
     const exploreLinks = [
         { name: 'Twos Day Sale', href: '/twos-day-sale' },
         { name: 'Futurwork', href: '/futurwork' },
-        { name: 'CSK x Abhaya', href: '/csk-abhaya' },
         { name: 'Slider', href: '/slider' },
-        { name: 'Episodic', href: '/episodic' },
     ];
 
     const companyLinks = [

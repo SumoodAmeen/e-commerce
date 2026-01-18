@@ -10,7 +10,7 @@ const Hero = () => {
                     {/* Shop Link Overlay */}
                     <Link
                         to="/shop"
-                        className="absolute bottom-8 md:bottom-16 left-1/2 transform -translate-x-1/2 z-10 text-white text-[22px] md:text-[32px] font-medium tracking-widest uppercase underline underline-offset-4 hover:opacity-80 transition-opacity duration-300"
+                        className="absolute bottom-8 md:bottom-16 left-1/2 transform -translate-x-1/2 z-10 text-white text-[22px] md:text-[32px] font-light tracking-widest uppercase underline underline-offset-4 hover:opacity-80 transition-opacity duration-300"
                     >
                         Shop
                     </Link>
