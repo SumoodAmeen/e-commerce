@@ -1,5 +1,6 @@
 import Navbar from '../home_page/Navbar';
 import ProductDetail from '../product_detail/ProductDetail';
+import Footer from '../home_page/Footer';
 
 const ProductDetailPage = () => {
     return (
@@ -8,6 +9,7 @@ const ProductDetailPage = () => {
             <main className="pt-[60px] md:pt-[100px]">
                 <ProductDetail />
             </main>
+            <Footer />
         </>
     );
 };

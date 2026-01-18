@@ -16,7 +16,6 @@ export const shopProducts = [
     {
         id: 'shop-1',
         name: 'Coffee Indigo Denim Long-Sleeved Shirt',
-        sku: 'Z/PAN/L60/HH9/6/S',
         price: '₹2,43,000.00',
         priceValue: 243000,
         image: product1,
@@ -31,12 +30,10 @@ Belgian-grown Flax is known for producing high-quality linen, offering a crisp l
 
 Ecru is the colour of unbleached pure cotton.
 - 28 inches / 71.12 cms is the length of the garment.`,
-        artisanInfo: 'Meticulously Crafted By 7 Artisans In 16.75 Hours',
     },
     {
         id: 'shop-2',
         name: 'Coffee Indigo Denim Bootcut Pants',
-        sku: 'Z/PAN/L60/HH9/6/M',
         price: '₹1,65,000.00',
         priceValue: 165000,
         image: product2,
@@ -46,12 +43,10 @@ Ecru is the colour of unbleached pure cotton.
         description: `Handcrafted bootcut pants made from premium denim fabric. Features a comfortable fit with classic styling perfect for any occasion.
 
 Made with attention to detail by skilled artisans using traditional techniques passed down through generations.`,
-        artisanInfo: 'Meticulously Crafted By 5 Artisans In 12 Hours',
     },
     {
         id: 'shop-3',
         name: 'Nil GM x The Darjeeling Limited',
-        sku: 'Z/PAN/L60/HH9/6/L',
         price: '₹4,25,000.00',
         priceValue: 425000,
         image: product3,
@@ -61,12 +56,10 @@ Made with attention to detail by skilled artisans using traditional techniques p
         description: `A limited edition collaboration piece featuring exclusive design elements. Premium quality materials combined with exceptional craftsmanship.
 
 This unique piece represents the perfect blend of traditional artistry and contemporary fashion.`,
-        artisanInfo: 'Meticulously Crafted By 10 Artisans In 24 Hours',
     },
     {
         id: 'shop-4',
         name: 'LV Tilted Sneaker',
-        sku: 'Z/SNK/L60/HH9/6/S',
         price: '₹1,14,000.00',
         priceValue: 114000,
         image: product4,
@@ -76,12 +69,10 @@ This unique piece represents the perfect blend of traditional artistry and conte
         description: `Premium sneakers crafted with high-quality leather and attention to detail. Comfortable for all-day wear with distinctive styling.
 
 Features cushioned insole and durable outsole for lasting comfort.`,
-        artisanInfo: 'Meticulously Crafted By 4 Artisans In 8 Hours',
     },
     {
         id: 'shop-5',
         name: 'Premium Leather Jacket',
-        sku: 'Z/JKT/L60/HH9/6/M',
         price: '₹3,85,000.00',
         priceValue: 385000,
         image: product5,
@@ -91,12 +82,10 @@ Features cushioned insole and durable outsole for lasting comfort.`,
         description: `A timeless leather jacket crafted from the finest full-grain leather. Features classic styling with modern comfort.
 
 Hand-stitched by master craftsmen with decades of experience.`,
-        artisanInfo: 'Meticulously Crafted By 8 Artisans In 20 Hours',
     },
     {
         id: 'shop-6',
         name: 'Classic Oxford Shoes',
-        sku: 'Z/SHO/L60/HH9/6/S',
         price: '₹1,95,000.00',
         priceValue: 195000,
         image: product6,
@@ -106,7 +95,6 @@ Hand-stitched by master craftsmen with decades of experience.`,
         description: `Elegant Oxford shoes made from premium leather. Perfect for formal occasions with exceptional comfort.
 
 Features Goodyear welt construction for durability and resoling capability.`,
-        artisanInfo: 'Meticulously Crafted By 6 Artisans In 14 Hours',
     },
 ];
 
@@ -115,7 +103,6 @@ export const seasonProducts = [
     {
         id: 'season-1',
         name: 'Brown Abaya',
-        sku: 'Z/ABY/L60/HH9/6/S',
         price: '₹1,32,000.00',
         priceValue: 132000,
         image: seasonProduct1,
@@ -124,12 +111,10 @@ export const seasonProducts = [
         description: `Elegant brown abaya crafted with premium fabric. Features flowing silhouette with intricate detailing.
 
 Perfect for both everyday wear and special occasions.`,
-        artisanInfo: 'Meticulously Crafted By 5 Artisans In 10 Hours',
     },
     {
         id: 'season-2',
         name: 'Full Length Abaya',
-        sku: 'Z/ABY/L60/HH9/6/M',
         price: '₹2,20,000.00',
         priceValue: 220000,
         image: seasonProduct2,
@@ -138,12 +123,10 @@ Perfect for both everyday wear and special occasions.`,
         description: `Stunning full-length abaya with elegant design. Made from luxurious fabric with beautiful embroidery.
 
 A statement piece for any wardrobe.`,
-        artisanInfo: 'Meticulously Crafted By 7 Artisans In 15 Hours',
     },
     {
         id: 'season-3',
         name: 'Beige Abaya',
-        sku: 'Z/ABY/L60/HH9/6/L',
         price: '₹1,14,000.00',
         priceValue: 114000,
         image: seasonProduct3,
@@ -152,12 +135,10 @@ A statement piece for any wardrobe.`,
         description: `Classic beige abaya with timeless elegance. Soft, flowing fabric with subtle detailing.
 
 Versatile piece suitable for various occasions.`,
-        artisanInfo: 'Meticulously Crafted By 4 Artisans In 8 Hours',
     },
     {
         id: 'season-4',
         name: 'Cream Abaya',
-        sku: 'Z/ABY/L60/HH9/6/XL',
         price: '₹64,000.00',
         priceValue: 64000,
         image: seasonProduct4,
@@ -166,7 +147,6 @@ Versatile piece suitable for various occasions.`,
         description: `Beautiful cream abaya with delicate design. Lightweight and comfortable for all-day wear.
 
 Perfect addition to any collection.`,
-        artisanInfo: 'Meticulously Crafted By 3 Artisans In 6 Hours',
     },
 ];
 

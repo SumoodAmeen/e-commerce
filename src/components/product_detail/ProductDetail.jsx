@@ -63,11 +63,6 @@ const ProductDetail = () => {
                         {product.name}
                     </h1>
 
-                    {/* SKU */}
-                    <p className="text-[12px] text-[#888] mt-2 text-center tracking-wide">
-                        SKU: {product.sku}
-                    </p>
-
                     {/* Price */}
                     <p className="text-[16px] text-[#1a1a1a] mt-3 text-center font-medium">
                         RS. {product.priceValue?.toLocaleString('en-IN')}.00
@@ -101,18 +96,8 @@ const ProductDetail = () => {
 
                     {/* Meet the Makers Button */}
                     <button className="w-full py-4 border border-[#1a1a1a] text-[#1a1a1a] text-[13px] tracking-[2px] uppercase mt-3 hover:bg-[#f5f5f5] transition-colors">
-                        MEET THE MAKERS
+                        WHISHLIST
                     </button>
-
-                    {/* Artisan Info */}
-                    <div className="text-center mt-8">
-                        <p className="text-[16px] text-[#1a1a1a] font-light">
-                            {product.artisanInfo}
-                        </p>
-                        <p className="text-[13px] text-[#888] mt-2">
-                            Know More About Them On The Link Above
-                        </p>
-                    </div>
 
                     {/* Product Details */}
                     <div className="mt-8 border-t border-[#e0e0e0] pt-6">
@@ -135,8 +120,8 @@ const ProductDetail = () => {
                             key={index}
                             onClick={() => setActiveImageIndex(index)}
                             className={`aspect-square border-2 overflow-hidden transition-all ${index === activeImageIndex
-                                    ? 'border-[#1a1a1a]'
-                                    : 'border-transparent hover:border-[#d0d0d0]'
+                                ? 'border-[#1a1a1a]'
+                                : 'border-transparent hover:border-[#d0d0d0]'
                                 }`}
                         >
                             <img
