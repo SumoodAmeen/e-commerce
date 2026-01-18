@@ -4,6 +4,7 @@ import ShopPage from './components/pages/ShopPage'
 import ProductDetailPage from './components/pages/ProductDetailPage'
 import CollectionPage from './components/pages/CollectionPage'
 import GiftPage from './components/pages/GiftPage'
+import LoginPage from './components/pages/LoginPage'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/product/:productId" element={<ProductDetailPage />} />
           <Route path="/collection" element={<CollectionPage />} />
           <Route path="/gifts" element={<GiftPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Router>
     </>
