@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 import { shopProducts } from '../../data/productData';
 import wishlistIcon from '../../assets/shop/wishlist.png';
 
 const Shop = () => {
+    const { addToCart } = useCart();
     // Scroll to top when component mounts
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -25,6 +27,20 @@ const Shop = () => {
                                         alt={product.name}
                                         className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
                                     />
+
+                                    {/* Add to Cart Overlay */}
+                                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                addToCart(product);
+                                            }}
+                                            className="bg-white/90 backdrop-blur-sm text-[#1a1a1a] px-4 py-2 text-[10px] tracking-[2px] uppercase hover:bg-[#1a1a1a] hover:text-white transition-all duration-300"
+                                        >
+                                            Add to Cart
+                                        </button>
+                                    </div>
 
                                     {/* Wishlist Icon */}
                                     <button

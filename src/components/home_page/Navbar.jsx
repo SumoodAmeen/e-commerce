@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 import searchIcon from '../../assets/navbar/search.png';
 import bagIcon from '../../assets/navbar/shopping-bag.png';
 import wishlistIcon from '../../assets/navbar/love.png';
 import callIcon from '../../assets/navbar/telephone.png';
 
 const Navbar = () => {
+    const { toggleCart, cartItems } = useCart();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
@@ -17,7 +19,6 @@ const Navbar = () => {
         { name: 'SHOP', href: '/shop' },
         { name: 'GIFTS', href: '/gifts' },
         { name: 'COLLECTION', href: '/collection' },
-        { name: 'SIZE CHART', href: '/size-chart' },
         { name: 'ABOUT', href: '/about' },
     ];
 
@@ -155,10 +156,16 @@ const Navbar = () => {
                         {/* Bag Icon */}
                         <div className="relative group">
                             <button
-                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
+                                onClick={toggleCart}
+                                className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70 relative"
                                 aria-label="Shopping bag"
                             >
                                 <img className="w-6 h-6" src={bagIcon} alt="Bag" />
+                                {cartItems.length > 0 && (
+                                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                                        {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
+                                    </span>
+                                )}
                             </button>
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 BAG

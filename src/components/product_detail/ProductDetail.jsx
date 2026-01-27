@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 import { getProductById } from '../../data/productData';
 
 const ProductDetail = () => {
+    const { addToCart } = useCart();
     const { productId } = useParams();
     const navigate = useNavigate();
     const [product, setProduct] = useState(null);
@@ -90,7 +92,10 @@ const ProductDetail = () => {
                     </div>
 
                     {/* Add to Cart Button */}
-                    <button className="w-full py-4 bg-[#1a1a1a] text-white text-[13px] tracking-[2px] uppercase mt-6 hover:bg-[#333] transition-colors">
+                    <button 
+                        onClick={() => addToCart(product)}
+                        className="w-full py-4 bg-[#1a1a1a] text-white text-[13px] tracking-[2px] uppercase mt-6 hover:bg-[#333] transition-colors"
+                    >
                         ADD TO CART
                     </button>
 
@@ -181,7 +186,10 @@ const ProductDetail = () => {
                     </div>
 
                     {/* Add to Cart Button */}
-                    <button className="w-full py-4 bg-[#1a1a1a] text-white text-[13px] tracking-[2px] uppercase mt-6 hover:bg-[#333] transition-colors">
+                    <button 
+                        onClick={() => addToCart(product)}
+                        className="w-full py-4 bg-[#1a1a1a] text-white text-[13px] tracking-[2px] uppercase mt-6 hover:bg-[#333] transition-colors"
+                    >
                         ADD TO CART
                     </button>
 

@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { CartProvider } from './context/CartContext'
+import Cart from './components/common/Cart'
 import HomePage from './components/pages/HomePage'
 import ShopPage from './components/pages/ShopPage'
 import ProductDetailPage from './components/pages/ProductDetailPage'
@@ -8,7 +10,8 @@ import LoginPage from './components/pages/LoginPage'
 
 function App() {
   return (
-    <>
+    <CartProvider>
+      <Cart />
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -19,7 +22,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </Router>
-    </>
+    </CartProvider>
   )
 }
 
