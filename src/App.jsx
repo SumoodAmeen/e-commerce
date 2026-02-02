@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import Cart from './components/common/Cart'
+import FloatingWhatsApp from './components/common/FloatingWhatsApp'
 import HomePage from './components/pages/HomePage'
 import ShopPage from './components/pages/ShopPage'
 import ProductDetailPage from './components/pages/ProductDetailPage'
@@ -13,6 +14,7 @@ function App() {
     <CartProvider>
       <Router>
         <Cart />
+        <FloatingWhatsApp />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
