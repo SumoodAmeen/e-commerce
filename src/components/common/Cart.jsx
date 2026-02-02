@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useCart } from '../../context/CartContext';
 
 const Cart = () => {
     const { isCartOpen, toggleCart, cartItems, removeFromCart, updateQuantity, cartTotal, formatPrice } = useCart();
-    const [giftWrapping, setGiftWrapping] = useState(false);
-
-    // Using a placeholder that looks more like a gift box
-    const giftWrappingImage = "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop";
 
     return (
         <>
@@ -42,7 +38,7 @@ const Cart = () => {
                     {cartItems.length === 0 ? (
                         <div className="flex flex-col items-center justify-center h-full space-y-4">
                             <p className="text-[14px] text-gray-400 font-light tracking-widest uppercase">Your bag is empty</p>
-                            <button 
+                            <button
                                 onClick={toggleCart}
                                 className="text-[12px] underline tracking-[2px] uppercase hover:text-black transition-colors"
                             >
@@ -104,37 +100,6 @@ const Cart = () => {
                                     </div>
                                 </div>
                             ))}
-
-                            {/* Gift Wrapping Section */}
-                            <div className="pt-10 border-t border-gray-100">
-                                <h4 className="text-[11px] font-medium tracking-[2px] uppercase text-[#1a1a1a] mb-6">
-                                    MAKE IT MORE SPECIAL WITH
-                                </h4>
-                                <div className="flex gap-6 items-center">
-                                    <div className="w-[80px] h-[80px] bg-[#2d4a61] flex-shrink-0 overflow-hidden flex items-center justify-center">
-                                        {/* Symbolic gift box if image fails */}
-                                        <div className="w-10 h-10 border border-white/30 flex items-center justify-center">
-                                            <div className="w-full h-[1px] bg-white/30 absolute"></div>
-                                            <div className="h-full w-[1px] bg-white/30 absolute"></div>
-                                        </div>
-                                        <img
-                                            src={giftWrappingImage}
-                                            alt="Gift Wrapping"
-                                            className="w-full h-full object-cover opacity-60"
-                                        />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h5 className="text-[11px] font-medium tracking-wider uppercase">GIFT WRAPPING</h5>
-                                        <p className="text-[11px] text-[#1a1a1a] mt-1 tracking-wide">RS. 300.00</p>
-                                        <button 
-                                            onClick={() => setGiftWrapping(!giftWrapping)}
-                                            className="text-[11px] uppercase tracking-[2px] underline decoration-gray-300 underline-offset-[6px] hover:decoration-black transition-all mt-3 block"
-                                        >
-                                            {giftWrapping ? 'Added' : 'Add to cart'}
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     )}
                 </div>
@@ -155,7 +120,7 @@ const Cart = () => {
                             <div className="flex items-center gap-3">
                                 <div className="w-[3px] h-[3px] bg-white rounded-full"></div>
                                 <span className="text-[12px] tracking-[1px] font-normal">
-                                    RS. {(cartTotal + (giftWrapping ? 300 : 0)).toLocaleString('en-IN')}.00
+                                    RS. {cartTotal.toLocaleString('en-IN')}.00
                                 </span>
                             </div>
                         </button>
