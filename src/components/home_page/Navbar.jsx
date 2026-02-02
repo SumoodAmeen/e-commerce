@@ -9,6 +9,7 @@ import callIcon from '../../assets/navbar/telephone.png';
 const Navbar = () => {
     const { toggleCart, cartItems } = useCart();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const lastScrollY = useRef(0);
@@ -63,6 +64,10 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const toggleSearch = () => {
+        setIsSearchOpen(!isSearchOpen);
+    };
+
     return (
         <>
             <header
@@ -92,6 +97,7 @@ const Navbar = () => {
                         {/* Search Icon */}
                         <div className="relative group">
                             <button
+                                onClick={toggleSearch}
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Search"
                             >
@@ -100,6 +106,23 @@ const Navbar = () => {
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 SEARCH
                             </span>
+                        </div>
+                        {/* Desktop Search Bar - Inline */}
+                        <div className={`hidden md:flex items-center transition-all duration-300 overflow-hidden ${isSearchOpen ? 'max-w-[300px] opacity-100 ml-3' : 'max-w-0 opacity-0 ml-0'
+                            }`}>
+                            <div className="relative flex items-center w-full">
+                                <input
+                                    type="text"
+                                    placeholder="Search products..."
+                                    className="w-full h-9 pl-4 pr-10 text-[12px] border border-gray-300 focus:border-[#1a1a1a] focus:outline-none transition-colors tracking-wide"
+                                />
+                                <button
+                                    className="absolute right-2 bg-transparent border-none cursor-pointer p-1 hover:opacity-70 transition-opacity"
+                                    aria-label="Submit search"
+                                >
+                                    <img className="w-4 h-4" src={searchIcon} alt="Search" />
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -170,6 +193,25 @@ const Navbar = () => {
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 BAG
                             </span>
+                        </div>
+                    </div>
+                </div>
+                {/* Mobile Search Bar - Full Width Below */}
+                <div className={`md:hidden transition-all duration-300 overflow-hidden border-t border-gray-100 ${isSearchOpen ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                    <div className="px-4 py-3">
+                        <div className="relative flex items-center w-full">
+                            <input
+                                type="text"
+                                placeholder="Search products..."
+                                className="w-full h-10 pl-4 pr-12 text-[13px] border border-gray-300 focus:border-[#1a1a1a] focus:outline-none transition-colors tracking-wide"
+                            />
+                            <button
+                                className="absolute right-3 bg-transparent border-none cursor-pointer p-1 hover:opacity-70 transition-opacity"
+                                aria-label="Submit search"
+                            >
+                                <img className="w-4 h-4" src={searchIcon} alt="Search" />
+                            </button>
                         </div>
                     </div>
                 </div>
