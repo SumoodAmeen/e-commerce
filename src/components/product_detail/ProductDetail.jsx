@@ -92,7 +92,7 @@ const ProductDetail = () => {
                     </div>
 
                     {/* Add to Cart Button */}
-                    <button 
+                    <button
                         onClick={() => addToCart(product)}
                         className="w-full py-4 bg-[#1a1a1a] text-white text-[13px] tracking-[2px] uppercase mt-6 hover:bg-[#333] transition-colors"
                     >
@@ -117,7 +117,7 @@ const ProductDetail = () => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden md:flex px-8 lg:px-16 gap-6 lg:gap-10">
+            <div className="hidden md:flex px-8 lg:px-16 gap-6 lg:gap-10 max-w-[1200px] mx-auto justify-center">
                 {/* Left - Thumbnail Gallery */}
                 <div className="flex flex-col gap-3 w-20">
                     {images.map((img, index) => (
@@ -186,7 +186,7 @@ const ProductDetail = () => {
                     </div>
 
                     {/* Add to Cart Button */}
-                    <button 
+                    <button
                         onClick={() => addToCart(product)}
                         className="w-full py-4 bg-[#1a1a1a] text-white text-[13px] tracking-[2px] uppercase mt-6 hover:bg-[#333] transition-colors"
                     >
