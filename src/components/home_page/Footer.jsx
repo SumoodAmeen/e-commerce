@@ -10,9 +10,9 @@ const Footer = () => {
     ];
 
     const exploreLinks = [
-        { name: 'Twos Day Sale', href: '/twos-day-sale' },
-        { name: 'Futurwork', href: '/futurwork' },
-        { name: 'Slider', href: '/slider' },
+        { name: 'Home', href: '/' },
+        { name: 'Shop', href: '/shop' },
+        { name: 'Collections', href: '/collection' },
     ];
 
     const companyLinks = [
