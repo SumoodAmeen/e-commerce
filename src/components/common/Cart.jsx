@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 
 const Cart = () => {
+    const navigate = useNavigate();
     const { isCartOpen, toggleCart, cartItems, removeFromCart, updateQuantity, cartTotal, formatPrice } = useCart();
+
+    const handleShopAll = () => {
+        toggleCart(); // Close the cart
+        navigate('/shop'); // Navigate to shop page
+    };
 
     return (
         <>
@@ -39,7 +46,7 @@ const Cart = () => {
                         <div className="flex flex-col items-center justify-center h-full space-y-4">
                             <p className="text-[14px] text-gray-400 font-light tracking-widest uppercase">Your bag is empty</p>
                             <button
-                                onClick={toggleCart}
+                                onClick={handleShopAll}
                                 className="text-[12px] underline tracking-[2px] uppercase hover:text-black transition-colors"
                             >
                                 Shop All
@@ -107,14 +114,6 @@ const Cart = () => {
                 {/* Footer */}
                 {cartItems.length > 0 && (
                     <div className="px-8 py-8 border-t border-gray-100 bg-white">
-                        <div className="space-y-4 mb-8">
-                            <button className="text-[13px] font-normal text-[#1a1a1a] tracking-wide hover:opacity-60 transition-opacity">
-                                Add order note
-                            </button>
-                            <p className="text-[12px] text-[#888] font-light tracking-wide">
-                                Taxes and shipping calculated at checkout
-                            </p>
-                        </div>
                         <button className="w-full bg-[#1a1a1a] text-white h-14 px-8 flex justify-between items-center group hover:bg-[#333] transition-all duration-300">
                             <span className="text-[11px] tracking-[3px] font-medium uppercase">CHECKOUT</span>
                             <div className="flex items-center gap-3">

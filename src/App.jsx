@@ -11,8 +11,8 @@ import LoginPage from './components/pages/LoginPage'
 function App() {
   return (
     <CartProvider>
-      <Cart />
       <Router>
+        <Cart />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
