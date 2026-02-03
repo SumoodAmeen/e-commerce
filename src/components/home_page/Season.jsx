@@ -34,7 +34,7 @@ const Season = () => {
                                     />
 
                                     {/* Add to Cart Overlay */}
-                                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                                    <div className="hidden md:flex absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity items-end justify-center pb-4">
                                         <button
                                             onClick={(e) => {
                                                 e.preventDefault();
