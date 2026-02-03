@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { seasonProducts } from '../../data/productData';
-import wishlistIcon from '../../assets/season/wishlist.png';
 
 const Season = () => {
+    const { addToCart } = useCart();
     const { toggleWishlist, isInWishlist } = useWishlist();
     return (
         <section className="w-full py-8 md:py-16">
@@ -31,6 +32,20 @@ const Season = () => {
                                         alt={product.name}
                                         className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                                     />
+
+                                    {/* Add to Cart Overlay */}
+                                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                                        <button
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                addToCart(product);
+                                            }}
+                                            className="bg-white/90 backdrop-blur-sm text-[#1a1a1a] px-4 py-2 text-[10px] tracking-[2px] uppercase hover:bg-[#1a1a1a] hover:text-white transition-all duration-300"
+                                        >
+                                            Add to Cart
+                                        </button>
+                                    </div>
 
                                     {/* Wishlist Icon */}
                                     <button

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { shopProducts } from '../../data/productData';
-import wishlistIcon from '../../assets/shop/wishlist.png';
 
 const Shop = () => {
     const { addToCart } = useCart();
