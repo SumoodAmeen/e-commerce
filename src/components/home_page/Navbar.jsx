@@ -166,12 +166,13 @@ const Navbar = () => {
                         </div>
                         {/* Wishlist Icon */}
                         <div className="relative group">
-                            <button
+                            <Link
+                                to="/wishlist"
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Wishlist"
                             >
                                 <img className="w-5 h-5" src={wishlistIcon} alt="Wishlist" />
-                            </button>
+                            </Link>
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 WISHLIST
                             </span>

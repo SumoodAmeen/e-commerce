@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 import { shopProducts } from '../../data/productData';
 import wishlistIcon from '../../assets/shop/wishlist.png';
 
 const Shop = () => {
     const { addToCart } = useCart();
+    const { toggleWishlist, isInWishlist } = useWishlist();
     // Scroll to top when component mounts
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -47,14 +49,20 @@ const Shop = () => {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             e.stopPropagation();
+                                            toggleWishlist(product);
                                         }}
-                                        className="absolute top-3 right-3 md:top-4 md:right-4 w-6 h-6 md:w-7 md:h-7 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
+                                        className={`absolute top-3 right-3 md:top-4 md:right-4 w-6 h-6 md:w-7 md:h-7 flex items-center justify-center transition-all ${isInWishlist(product.id)
+                                                ? 'opacity-100 scale-110'
+                                                : 'opacity-70 hover:opacity-100'
+                                            }`}
                                         aria-label="Add to wishlist"
                                     >
                                         <img
                                             src={wishlistIcon}
                                             alt="Wishlist"
-                                            className="w-5 h-5 md:w-6 md:h-6"
+                                            className={`w-5 h-5 md:w-6 md:h-6 transition-all ${isInWishlist(product.id) ? 'filter brightness-0 saturate-100' : ''
+                                                }`}
+                                            style={isInWishlist(product.id) ? { filter: 'invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)' } : {}}
                                         />
                                     </button>
                                 </div>

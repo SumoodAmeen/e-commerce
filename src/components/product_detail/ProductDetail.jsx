@@ -1,15 +1,21 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
+import { useWishlist } from '../../context/WishlistContext';
 import { getProductById } from '../../data/productData';
 
 const ProductDetail = () => {
     const { addToCart } = useCart();
+    const { toggleWishlist, isInWishlist } = useWishlist();
     const { productId } = useParams();
     const navigate = useNavigate();
+    const location = useLocation();
     const [product, setProduct] = useState(null);
     const [selectedSize, setSelectedSize] = useState('');
     const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+    // Check if user came from wishlist page
+    const fromWishlist = location.state?.fromWishlist || false;
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -99,9 +105,12 @@ const ProductDetail = () => {
                         ADD TO CART
                     </button>
 
-                    {/* Meet the Makers Button */}
-                    <button className="w-full py-4 border border-[#1a1a1a] text-[#1a1a1a] text-[13px] tracking-[2px] uppercase mt-3 hover:bg-[#f5f5f5] transition-colors">
-                        WHISHLIST
+                    {/* Wishlist Button */}
+                    <button
+                        onClick={() => toggleWishlist(product)}
+                        className="w-full py-4 border border-[#1a1a1a] text-[#1a1a1a] text-[13px] tracking-[2px] uppercase mt-3 hover:bg-[#f5f5f5] transition-colors"
+                    >
+                        {isInWishlist(product.id) ? 'REMOVE FROM WISHLIST' : 'ADD TO WISHLIST'}
                     </button>
 
                     {/* Product Details */}
@@ -193,9 +202,12 @@ const ProductDetail = () => {
                         ADD TO CART
                     </button>
 
-                    {/* Meet the Makers Button */}
-                    <button className="w-full py-4 border border-[#1a1a1a] text-[#1a1a1a] text-[13px] tracking-[2px] uppercase mt-3 hover:bg-[#f5f5f5] transition-colors">
-                        MEET THE MAKERS
+                    {/* Wishlist Button */}
+                    <button
+                        onClick={() => toggleWishlist(product)}
+                        className="w-full py-4 border border-[#1a1a1a] text-[#1a1a1a] text-[13px] tracking-[2px] uppercase mt-3 hover:bg-[#f5f5f5] transition-colors"
+                    >
+                        {isInWishlist(product.id) ? 'REMOVE FROM WISHLIST' : 'ADD TO WISHLIST'}
                     </button>
 
                     {/* Artisan Info */}
