@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import searchIcon from '../../assets/navbar/search.png';
 import bagIcon from '../../assets/navbar/shopping-bag.png';
-import wishlistIcon from '../../assets/navbar/love.png';
+import wishlistIcon from '../../assets/navbar/wishlist.png';
 import callIcon from '../../assets/navbar/telephone.png';
 import logo from '../../assets/navbar/logo.png';
+import UserIcon from '../../assets/navbar/user.png';
 
 const Navbar = () => {
     const { toggleCart, cartItems } = useCart();
@@ -102,7 +103,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Search"
                             >
-                                <img className="w-4 h-4" src={searchIcon} alt="Search" />
+                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
                             </button>
                             <span className="hidden md:block absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 SEARCH
@@ -121,7 +122,7 @@ const Navbar = () => {
                                     className="absolute right-2 bg-transparent border-none cursor-pointer p-1 hover:opacity-70 transition-opacity"
                                     aria-label="Submit search"
                                 >
-                                    <img className="w-4 h-4" src={searchIcon} alt="Search" />
+                                    <img className="w-5 h-5" src={searchIcon} alt="Search" />
                                 </button>
                             </div>
                         </div>
@@ -144,7 +145,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="Contact via WhatsApp"
                             >
-                                <img className="w-4.5 h-4.5" src={callIcon} alt="Call" />
+                                <img className="w-5 h-5" src={callIcon} alt="Call" />
                             </a>
                             <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 WHATSAPP
@@ -157,10 +158,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70"
                                 aria-label="User account"
                             >
-                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                    <circle cx="12" cy="8" r="4" />
-                                    <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                                </svg>
+                                <img className="w-5 h-5" src={UserIcon} alt="Profile" />
                             </Link>
                             <span className="absolute top-full left-1/2 -translate-x-1/2 mt-1 text-[9px] tracking-wider uppercase text-[#1a1a1a] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 MY ACCOUNT
@@ -186,7 +184,7 @@ const Navbar = () => {
                                 className="bg-transparent border-none cursor-pointer p-1 flex items-center justify-center transition-opacity duration-200 hover:opacity-70 relative"
                                 aria-label="Shopping bag"
                             >
-                                <img className="w-6 h-6" src={bagIcon} alt="Bag" />
+                                <img className="w-5 h-5" src={bagIcon} alt="Bag" />
                                 {cartItems.length > 0 && (
                                     <span className="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                                         {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
@@ -213,7 +211,7 @@ const Navbar = () => {
                                 className="absolute right-3 bg-transparent border-none cursor-pointer p-1 hover:opacity-70 transition-opacity"
                                 aria-label="Submit search"
                             >
-                                <img className="w-4 h-4" src={searchIcon} alt="Search" />
+                                <img className="w-5 h-5" src={searchIcon} alt="Search" />
                             </button>
                         </div>
                     </div>
