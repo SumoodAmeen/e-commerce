@@ -5,6 +5,7 @@ import searchIcon from '../../assets/navbar/search.png';
 import bagIcon from '../../assets/navbar/shopping-bag.png';
 import wishlistIcon from '../../assets/navbar/love.png';
 import callIcon from '../../assets/navbar/telephone.png';
+import logo from '../../assets/navbar/logo.png';
 
 const Navbar = () => {
     const { toggleCart, cartItems } = useCart();
@@ -127,9 +128,10 @@ const Navbar = () => {
                     </div>
 
                     {/* Centered Logo */}
-                    <div className="text-[22px] md:text-xl font-normal tracking-[2px] uppercase text-[#1a1a1a]">
-                        Abhaya
-                    </div>
+                    {/* Centered Logo */}
+                    <Link to="/" className="block">
+                        <img className="h-10 w-auto object-contain" src={logo} alt="Abhaya" />
+                    </Link>
 
                     {/* Right Icons */}
                     <div className="flex items-center gap-3 md:gap-6">
