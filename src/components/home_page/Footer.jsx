@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import footerIcon from '../../assets/footer/footericon.png';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -116,8 +117,7 @@ const Footer = () => {
                         {/* Social with decorative stars */}
                         <div>
                             <div className="flex items-center gap-2 mb-4">
-                                <span className="text-[#e53935] text-lg">✱</span>
-                                <span className="text-[#e53935] text-lg opacity-60">✱</span>
+                                <img src={footerIcon} alt="Footer Icon" className="w-10 h-10 object-contain" />
                             </div>
                             <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4">Social</h4>
                             <ul className="space-y-3">
@@ -154,8 +154,7 @@ const Footer = () => {
                         ABHAYA
                     </div>
                     <div className="flex items-center gap-1">
-                        <span className="text-[#e53935] text-lg">✱</span>
-                        <span className="text-[#e53935] text-lg opacity-60">✱</span>
+                        <img src={footerIcon} alt="Footer Icon" className="w-8 h-8 object-contain" />
                     </div>
                 </div>
 
