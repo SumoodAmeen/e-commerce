@@ -74,6 +74,9 @@ const Footer = () => {
                     <div className="flex gap-16 lg:gap-24">
                         {/* Explore */}
                         <div>
+                            <div className="flex items-center gap-2 mb-4 invisible">
+                                <img src={footerIcon} alt="Footer Icon" className="w-10 h-10 object-contain" />
+                            </div>
                             <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4">Explore</h4>
                             <ul className="space-y-3">
                                 {exploreLinks.map((link) => (
@@ -88,6 +91,9 @@ const Footer = () => {
 
                         {/* Support */}
                         <div>
+                            <div className="flex items-center gap-2 mb-4 invisible">
+                                <img src={footerIcon} alt="Footer Icon" className="w-10 h-10 object-contain" />
+                            </div>
                             <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4">Support</h4>
                             <ul className="space-y-3">
                                 {supportLinks.map((link) => (
@@ -102,6 +108,9 @@ const Footer = () => {
 
                         {/* Company */}
                         <div>
+                            <div className="flex items-center gap-2 mb-4 invisible">
+                                <img src={footerIcon} alt="Footer Icon" className="w-10 h-10 object-contain" />
+                            </div>
                             <h4 className="text-[11px] text-[#999] uppercase tracking-wider mb-4">Company</h4>
                             <ul className="space-y-3">
                                 {companyLinks.map((link) => (
