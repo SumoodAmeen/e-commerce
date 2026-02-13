@@ -10,6 +10,7 @@ import CollectionPage from './components/pages/CollectionPage'
 import GiftPage from './components/pages/GiftPage'
 import LoginPage from './components/pages/LoginPage'
 import WhishlistPage from './components/pages/WhishlistPage'
+import CheckoutPage from './components/pages/CheckoutPage'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/gifts" element={<GiftPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/wishlist" element={<WhishlistPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
           </Routes>
         </Router>
       </WishlistProvider>

@@ -114,7 +114,13 @@ const Cart = () => {
                 {/* Footer */}
                 {cartItems.length > 0 && (
                     <div className="px-8 py-8 border-t border-gray-100 bg-white">
-                        <button className="w-full bg-[#1a1a1a] text-white h-14 px-8 flex justify-between items-center group hover:bg-[#333] transition-all duration-300">
+                        <button
+                            onClick={() => {
+                                toggleCart();
+                                navigate('/checkout');
+                            }}
+                            className="w-full bg-[#1a1a1a] text-white h-14 px-8 flex justify-between items-center group hover:bg-[#333] transition-all duration-300"
+                        >
                             <span className="text-[11px] tracking-[3px] font-medium uppercase">CHECKOUT</span>
                             <div className="flex items-center gap-3">
                                 <div className="w-[3px] h-[3px] bg-white rounded-full"></div>
